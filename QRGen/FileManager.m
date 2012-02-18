@@ -16,8 +16,11 @@ static FileManager* _sharedFileManager = nil;
 	@synchronized([FileManager class])
 	{
 		if (!_sharedFileManager)
+#if __has_feature(objc_arc)
+			_sharedFileManager = [[self alloc] init];
+#else
 			[[[self alloc] init] autorelease];
-  
+#endif
 		return _sharedFileManager;
 	}
 	return nil;
@@ -59,11 +62,15 @@ static FileManager* _sharedFileManager = nil;
 }
 
 
+#if __has_feature(objc_arc)
 
+#else
 -(void)dealloc
 {
- [super dealloc];
- [qRFile release];
+  [super dealloc];
+  [qRFile release];
 }
+
+#endif
 
 @end

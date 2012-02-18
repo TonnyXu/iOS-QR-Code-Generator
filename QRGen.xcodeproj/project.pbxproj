@@ -148,9 +148,9 @@
 		CD0E755913DF49E300181C31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD0E755A13DF49E300181C31 /* QRGen-Info.plist */,
 				CD0E763113DF50CB00181C31 /* QRDraw */,
 				CD0E75D713DF4EAA00181C31 /* libpng */,
-				CD0E755A13DF49E300181C31 /* QRGen-Info.plist */,
 				CD0E755B13DF49E300181C31 /* InfoPlist.strings */,
 				CD0E755E13DF49E300181C31 /* QRGen-Prefix.pch */,
 				CD0E755F13DF49E300181C31 /* main.m */,

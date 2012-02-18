@@ -10,7 +10,7 @@
 
 @interface FileManager : NSObject
 {
- NSString *qRFile;
+  NSString *qRFile;
 }
 @property (nonatomic,copy) NSString *qRFile;
 
